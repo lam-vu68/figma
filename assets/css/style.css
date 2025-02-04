@@ -51,6 +51,7 @@ a {
 .btn:hover {
   /* hiệu ứng làm mờ */
   opacity: 0.8;
+  cursor: pointer; /*hiển thị dấu tay*/
 }
 
 /* ===================================================================HEADER======================================================= */
@@ -295,4 +296,81 @@ a {
   background-color: var(--primary-color);
   color: #fff;
   cursor: pointer; /* hiện bàn tay */
+}
+
+.popular .thumb {
+  height: 278px;
+  width: 100%;
+  object-fit: cover; /*ép ảnh đẹp cắt phần thừa*/
+  border-radius: 12px 12px 0px 0px;
+}
+.popular .course-item {
+  border-radius: 12px;
+  background-color: #6f1593;
+  border: 1px solid #e2dfda;
+}
+
+.popular .course-item:hover {
+  border-radius: 12px;
+  background-color: #c597d9;
+  box-shadow: 0 16px 38px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+}
+
+.popular .course-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular .course-item .title a {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.popular .rating .value {
+  margin-left: 6px;
+  color: #fea31b;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+  color: #050c06;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.popular .course-item .foot {
+  margin-top: 12px;
+}
+
+.popular .course-item .price {
+  color: #171100;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  font-weight: 600;
+}
+
+.popular .course-item .btn-book {
+  border: none;
+}
+
+.popular .course-item .btn-book:hover {
+  background-color: var(--primary-color);
 }
