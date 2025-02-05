@@ -35,6 +35,25 @@ a {
   /* chỉnh co lại màn hình */
   max-width: calc(100% - 48px);
 }
+
+/* dùng cho trường hợp chữ nhiều chuyển thành dấu 3 chấm sẽ không 
+bị vỡ giao diện  */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* quá 2 dòng sẽ có dấu 3 chấm */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/* xóa phần  */
+.break-all {
+  word-break: break-all;
+}
 .btn {
   color: #fff;
   text-align: center;
