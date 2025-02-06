@@ -523,3 +523,103 @@ bị vỡ giao diện  */
   width: 470px;
   height: 440px;
 }
+
+/* ======================================Blog 2 ====================================== */
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .desc {
+  width: 448px; /*có độ rộng giờ nó sẽ căn giữa độ rộng  này nên nó không nằm giữa bốc cha*/
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  /* cách căn giữa */
+  margin: 16px auto 0;
+}
+
+.blogs .blog-list {
+  gap: 30px;
+  display: flex;
+  margin-top: 55px;
+}
+
+.blogs .item {
+  width: 33.33%;
+  background: #6f1593;
+  border-radius: 16px;
+}
+
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  background: #bf76db;
+}
+.blogs .item .thumb {
+  height: 250px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  position: relative; /*cho th con căn theo cha nó*/
+  color: #050c06;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* giờ thẻ before sẽ dc coi như là 1 thẻ con của date vậy nên h tác dụng flex tác động lên nó dc */
+  display: inline-flex; /*chỉ chứa vừa nội dung thôi*/
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+/* làm dấu chấm nhỏ trước thẻ span*/
+.blogs .item .date::before {
+  content: "";
+  background: var(--primary-color);
+  /* phải dùng display: inline-block mới xét đc kích thước*/
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+
+/* tạo dấu gạch chân sau nhỏ dưới thẻ span*/
+.blogs .item .date::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #aa65cc;
+  /* vì nó là con của date nên dùng position để tách và căn theo thk da là chỉnh xuống dòng dc */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -27px; /*thay cho chiều rộng */
+}
+
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+}
+
+.blogs .item .btn:hover {
+  background: var(--primary-color);
+}
